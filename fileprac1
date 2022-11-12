@@ -1,3 +1,4 @@
 webDriver driver=new ChromeDriver();
 driver.get("https://demo.actitime.com/login.do");
 driver.quit;
+driver.close;
