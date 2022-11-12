@@ -1,0 +1,58 @@
+
+	*GROUP BY AXIS
+
+
+	Syntax:-  Fixed Element/Axis Name::tagname[Predicate]
+
+
+	//td[text()='Buddhist train']			(Fixed Element)
+	
+	//td[text()='Buddhist train']/..		(To Find common parent)
+
+	//td[text()='Buddhist train']/parent::		
+	
+	//td[text()='Buddhist train']/parent::tr	(Tagname/Predicate)
+	
+	//td[text()='Buddhist train']/parent::tr//td[@data-title="helpline"]		(Xpath For Dynamic Element)
+
+
+	**Fixed element/../../../../../../../..dynamic element		(Instead of this use following Syntax)
+
+	Fixed Element/Axis name::tagname[Predicate]Dynamic Element
+
+
+
+
+	For mail Id
+
+	//td[text()='buddhisttrain@irctc.com']/parent::tr	
+
+
+	For Maharajas Express
+
+	//td[text()="Maharajas' Express"]/parent::tr
+
+
+	**Flipkart**
+
+	Realme C33
+	
+//div[text()='realme C33 (Aqua Blue, 32 GB)']
+//div[text()='realme C33 (Aqua Blue, 32 GB)']/../..
+//div[text()='realme C33 (Aqua Blue, 32 GB)']class="_3pLy-c row"       # (copy common parent and remove /..)
+//div[text()='realme C33 (Aqua Blue, 32 GB)']/ancestor::div[contains(@class,'_3pLy-c row')]		# (Putting the Relationship i.e ancestor)
+//div[text()='realme C33 (Aqua Blue, 32 GB)']/ancestor::div[contains(@class,'_3pLy-c row')]//div[@class='_30jeq3 _1_WHN1']
+
+
+
+
+
+
+
+
+	
+	
+	Change Email-Id maharajas@irtc.com
+	 Result 1 of 1
+	
+	//td[text()='maharaja@irctc.com']/parent::tr
